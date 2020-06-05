@@ -1,0 +1,54 @@
+You can use prop-types to document the intended types of properties passed to components. React (and potentially other libraries—see the checkPropTypes() reference below) will check props passed to your components against those definitions, and warn in development if they don’t match
+If you prefer to exclude prop-types from your application and use it globally via window.PropTypes, the prop-types package provides single-file distributions, which are hosted on the following CDNs
+Beautiful Soup uses a class called UnicodeDammit to detect the encodings of documents you give it and convert them to Unicode, no matter what. If you need to do this for other documents (without using Beautiful Soup to parse them), you can use UnicodeDammit by itself. It's heavily based on code from the Universal Feed Parser.
+
+If you're running an older version of Python than 2.4, be sure to download and install cjkcodecs and iconvcodec, which make Python capable of supporting more codecs, especially CJK codecs. Also install the chardet library, for better autodetection.
+
+Beautiful Soup tries the following encodings, in order of priority, to turn your document into Unicode:
+
+An encoding you pass in as the fromEncoding argument to the soup constructor.
+An encoding discovered in the document itself: for instance, in an XML declaration or (for HTML documents) an http-equiv META tag. If Beautiful Soup finds this kind of encoding within the document, it parses the document again from the beginning and gives the new encoding a try. The only exception is if you explicitly specified an encoding, and that encoding actually worked: then it will ignore any encoding it finds in the document.
+An encoding sniffed by looking at the first few bytes of the file. If an encoding is detected at this stage, it will be one of the UTF-* encodings, EBCDIC, or ASCII.
+An encoding sniffed by the chardet library, if you have it installed.
+UTF-8
+Windows-1252
+Beautiful Soup will almost always guess right if it can make a guess at all. But for documents with no declarations and in strange encodings, it will often not be able to guess. It will fall back to Windows-1252, which will probably be wrong. Here's an EUC-JP example where Beautiful Soup guesses the encoding wrong. (Again, because it uses EUC-JP, this example will only work if you are running Python 2.4 or have cjkcodecs installed):
+Beautiful Soup uses a class called UnicodeDammit to detect the encodings of documents you give it and convert them to Unicode, no matter what. If you need to do this for other documents (without using Beautiful Soup to parse them), you can use UnicodeDammit by itself. It's heavily based on code from the Universal Feed Parser.
+
+If you're running an older version of Python than 2.4, be sure to download and install cjkcodecs and iconvcodec, which make Python capable of supporting more codecs, especially CJK codecs. Also install the chardet library, for better autodetection.
+
+Beautiful Soup tries the following encodings, in order of priority, to turn your document into Unicode:
+
+An encoding you pass in as the fromEncoding argument to the soup constructor.
+An encoding discovered in the document itself: for instance, in an XML declaration or (for HTML documents) an http-equiv META tag. If Beautiful Soup finds this kind of encoding within the document, it parses the document again from the beginning and gives the new encoding a try. The only exception is if you explicitly specified an encoding, and that encoding actually worked: then it will ignore any encoding it finds in the document.
+An encoding sniffed by looking at the first few bytes of the file. If an encoding is detected at this stage, it will be one of the UTF-* encodings, EBCDIC, or ASCII.
+An encoding sniffed by the chardet library, if you have it installed.
+UTF-8
+Windows-1252
+Beautiful Soup will almost always guess right if it can make a guess at all. But for documents with no declarations and in strange encodings, it will often not be able to guess. It will fall back to Windows-1252, which will probably be wrong. Here's an EUC-JP example where Beautiful Soup guesses the encoding wrong. (Again, because it uses EUC-JP, this example will only work if you are running Python 2.4 or have cjkcodecs installed):
+Beautiful Soup uses a class called UnicodeDammit to detect the encodings of documents you give it and convert them to Unicode, no matter what. If you need to do this for other documents (without using Beautiful Soup to parse them), you can use UnicodeDammit by itself. It's heavily based on code from the Universal Feed Parser.
+
+If you're running an older version of Python than 2.4, be sure to download and install cjkcodecs and iconvcodec, which make Python capable of supporting more codecs, especially CJK codecs. Also install the chardet library, for better autodetection.
+
+Beautiful Soup tries the following encodings, in order of priority, to turn your document into Unicode:
+
+An encoding you pass in as the fromEncoding argument to the soup constructor.
+An encoding discovered in the document itself: for instance, in an XML declaration or (for HTML documents) an http-equiv META tag. If Beautiful Soup finds this kind of encoding within the document, it parses the document again from the beginning and gives the new encoding a try. The only exception is if you explicitly specified an encoding, and that encoding actually worked: then it will ignore any encoding it finds in the document.
+An encoding sniffed by looking at the first few bytes of the file. If an encoding is detected at this stage, it will be one of the UTF-* encodings, EBCDIC, or ASCII.
+An encoding sniffed by the chardet library, if you have it installed.
+UTF-8
+Windows-1252
+Beautiful Soup will almost always guess right if it can make a guess at all. But for documents with no declarations and in strange encodings, it will often not be able to guess. It will fall back to Windows-1252, which will probably be wrong. Here's an EUC-JP example where Beautiful Soup guesses the encoding wrong. (Again, because it uses EUC-JP, this example will only work if you are running Python 2.4 or have cjkcodecs installed):
+Beautiful Soup uses a class called UnicodeDammit to detect the encodings of documents you give it and convert them to Unicode, no matter what. If you need to do this for other documents (without using Beautiful Soup to parse them), you can use UnicodeDammit by itself. It's heavily based on code from the Universal Feed Parser.
+
+If you're running an older version of Python than 2.4, be sure to download and install cjkcodecs and iconvcodec, which make Python capable of supporting more codecs, especially CJK codecs. Also install the chardet library, for better autodetection.
+
+Beautiful Soup tries the following encodings, in order of priority, to turn your document into Unicode:
+
+An encoding you pass in as the fromEncoding argument to the soup constructor.
+An encoding discovered in the document itself: for instance, in an XML declaration or (for HTML documents) an http-equiv META tag. If Beautiful Soup finds this kind of encoding within the document, it parses the document again from the beginning and gives the new encoding a try. The only exception is if you explicitly specified an encoding, and that encoding actually worked: then it will ignore any encoding it finds in the document.
+An encoding sniffed by looking at the first few bytes of the file. If an encoding is detected at this stage, it will be one of the UTF-* encodings, EBCDIC, or ASCII.
+An encoding sniffed by the chardet library, if you have it installed.
+UTF-8
+Windows-1252
+Beautiful Soup will almost always guess right if it can make a guess at all. But for documents with no declarations and in strange encodings, it will often not be able to guess. It will fall back to Windows-1252, which will probably be wrong. Here's an EUC-JP example where Beautiful Soup guesses the encoding wrong. (Again, because it uses EUC-JP, this example will only work if you are running Python 2.4 or have cjkcodecs installed):

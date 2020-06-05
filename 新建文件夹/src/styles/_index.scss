@@ -1,0 +1,175 @@
+// 样式初始化
+@import './normalize';
+$primary-width: 1536;
+
+// 移动端
+$marginLR: 20px;
+$marginTB: 60px;
+
+// PC
+$PC_design_fontsize: 26;
+$primary-color: #043584;
+@function rem($px) {
+  @return ($px / $PC_design_fontsize) * 1rem;
+}
+
+// 1h 省略号
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+// hh省略号
+@mixin hh_ellipsis($hh) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $hh;
+  line-clamp: $hh;
+  -webkit-box-orient: vertical;
+}
+
+// 固定宽度居中
+@mixin center() {
+  width: rem($primary-width);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 1px 问题
+$border-color-base: #000;
+@mixin scale-hairline-common($color, $top, $right, $bottom, $left) {
+  content: '';
+  position: absolute;
+  background-color: $color;
+  display: block;
+  z-index: 1;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin hairlineTop($color: $border-color-base) {
+  border-top: 1px solid $color;
+
+  html:not([data-scale]) & {
+    @media (min-resolution: 2dppx) {
+      border-top: none;
+
+      &::before {
+        @include scale-hairline-common($color, 0, auto, auto, 0);
+        width: 100%;
+        height: 1px;
+        transform-origin: 50% 50%;
+        transform: scaleY(0.5);
+
+        @media (min-resolution: 3dppx) {
+          transform: scaleY(0.33);
+        }
+      }
+    }
+  }
+}
+
+@mixin hairlineRgiht($color: $border-color-base) {
+  border-right: 1px solid $color;
+
+  html:not([data-scale]) & {
+    @media (min-resolution: 2dppx) {
+      border-right: none;
+
+      &::after {
+        @include scale-hairline-common($color, 0, 0, auto, auto);
+        width: 1px;
+        height: 100%;
+        background: $color;
+        transform-origin: 100% 50%;
+        transform: scaleX(0.5);
+
+        @media (min-resolution: 3dppx) {
+          transform: scaleX(0.33);
+        }
+      }
+    }
+  }
+}
+@mixin hairlineBottom($color: $border-color-base) {
+  border-bottom: 1px solid $color;
+  html:not([data-scale]) & {
+    @media (min-resolution: 2dppx) {
+      border-bottom: none;
+      &::after {
+        @include scale-hairline-common($color, auto, auto, 0, 0);
+        width: 100%;
+        height: 1px;
+        transform-origin: 50% 100%;
+        transform: scaleY(0.5);
+        @media (min-resolution: 3dppx) {
+          transform: scaleY(0.33);
+        }
+      }
+    }
+  }
+}
+
+@mixin hairlineLeft($color: $border-color-base) {
+  border-left: 1px solid $color;
+
+  html:not([data-scale]) & {
+    @media (min-resolution: 2dppx) {
+      border-left: none;
+
+      &::before {
+        @include scale-hairline-common($color, 0, auto, auto, 0);
+        width: 1px;
+        height: 100%;
+        transform-origin: 100% 50%;
+        transform: scaleX(0.5);
+
+        @media (min-resolution: 3dppx) {
+          transform: scaleX(0.33);
+        }
+      }
+    }
+  }
+}
+
+@mixin hairlineAll($color: $border-color-base, $radius: 0) {
+  border: 1px solid $color;
+  border-radius: $radius;
+
+  html:not([data-scale]) & {
+    @media (min-resolution: 2dppx) {
+      position: relative;
+      border: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 200%;
+        border: 1px solid $color;
+        border-radius: $radius * 2;
+        transform-origin: 0 0;
+        transform: scale(0.5);
+        box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+        pointer-events: none;
+        // $media (min-resolution: 3dppx) {
+        //   width: 300%;
+        //   height: 300%;
+        //   border-radius: $radius * 3;
+        //   transform: scale(0.33);
+        // }
+      }
+    }
+  }
+}

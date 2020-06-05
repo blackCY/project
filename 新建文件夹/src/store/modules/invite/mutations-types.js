@@ -1,0 +1,1 @@
+export const GET_INVITE_DETAILS = 'GET_INVITE_DETAILS';
